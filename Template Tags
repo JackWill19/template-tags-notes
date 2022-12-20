@@ -30,3 +30,39 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 // }
 
 // add_filter('the_title', 'wphierarchy_title_markup', 10, 2);
+
+
+// GENERAL TAGS
+
+// Include Tags
+    //get_header(); // Includes the header template for the theme, typically includes site title, logo, main nav and socials
+
+    //get_footer(); // Includes the footer template for the theme, contains copyright, privacy policy, socials, newsletter etc.
+
+    //get_sidebar(); // Includes the sidebar for the theme, can include recent posts, search bar, categories
+
+    //get_template_part(); // Allows you to include a template part in your theme, typically reusable pieces of code, often used with a loop
+
+    //get_search_form(); // Includes the searchform template for a theme
+
+    //comments_template(); // Includes comments template for the theme
+
+
+// Login Tags
+    // wp_loginout(); // a function that displays a log in or log out link depending on if youre logged in or not
+
+    // wp_logout_url(); // a function that generates a log out url for the current site which will log the user out of the site
+
+    // wp_login_url(); // a function that generates a log in url for the current site which will log the user into the site
+
+    // wp_login_form(); // Displays a log in form for the site, includes a user, password field and submit button
+
+    // wp_lostpassword_url(); // generates a lost password page, when clicked will take the user to a form where they can get a passord reset email
+
+    // wp_register(); // displays a reg form for the site, takes a username, email, password and a submit button
+
+    // is_user_logged_in(); // checks if the user is logged in
+
+
+
+// bloginfo
