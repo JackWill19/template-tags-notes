@@ -77,7 +77,17 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 // ARCHIVE TAGS
 
 single_post_title(); // Displays the title of a single post, should be used in a loop
+
 post_type_archive_title(); // Displays the title of a post type archive page
+                           // A post type archive page is a page that lists all of the posts of a particular post type, 
+                           // such as a page that lists all of the posts in a specific category.
+
 single_cat_title(); // Displays the title of a single category archive page
+                    // A category archive page is a page that lists all of the posts in a specific category.
+
 single_tag_title(); // Displays the title of a single tag archive page
+                    // A tag archive page is a page that lists all of the posts with a specific tag.
+
 single_term_title(); // Displays the title of a single term archive page
+                     // A term archive page is a page that lists all of the posts with a specific term from a taxonomy 
+                     // (a way of grouping posts by a common attribute).
