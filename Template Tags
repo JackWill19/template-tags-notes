@@ -1,0 +1,19 @@
+<?php
+
+/* TEMPLATE TAGS */
+
+/*
+
+// the_ VS get_the_
+
+the_title(); // Echoes the title
+get_the_title(); // Gets or Returns the title
+
+// Template Tags can accept parameters
+
+<h1><?php the_title(); ?></h1> // Both of these result in the same outcome
+<?php the_title('<h1>', '</h1>') ?>
+
+the_title($before, $after, $echo); // the_title accepts multiple parameters, before (what prepends to the title), after(what appends to the title) and echo (if it should be echoed)
+
+*/
