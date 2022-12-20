@@ -17,3 +17,16 @@ get_the_title(); // Gets or Returns the title
 the_title($before, $after, $echo); // the_title accepts multiple parameters, before (what prepends to the title), after(what appends to the title) and echo (if it should be echoed)
 
 */
+
+// Template Tag Filters - Hook
+
+// function wphierarchy_title_markup($title, $id = null) {
+//     if(!is_singular() && in_the_loop()) { // Checking to see if this is not a singular post and that its inside the loop
+//         $title = '<h2><a href="' . get_permalink($id) . '">' . $title . '</a></h2>'; // Making sure that title is a h2 tag with a link to the related page
+//     } else if (is_singlular() && in_the_loop()) { // Then checks if is a single post
+//         $title = '<h1>' . $title . '</h1>';
+//     }
+//     return $title;
+// }
+
+// add_filter('the_title', 'wphierarchy_title_markup', 10, 2);
