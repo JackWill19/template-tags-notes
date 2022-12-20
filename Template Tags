@@ -16,7 +16,6 @@ get_the_title(); // Gets or Returns the title
 
 the_title($before, $after, $echo); // the_title accepts multiple parameters, before (what prepends to the title), after(what appends to the title) and echo (if it should be echoed)
 
-*/
 
 // Template Tag Filters - Hook
 
@@ -66,3 +65,11 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 
 
 // bloginfo
+
+<?php bloginfo('name'); ?> // Shows Site Title
+<?php bloginfo('description'); ?> // Shows Site Description
+<?php bloginfo('url'); ?> // Shows Site Address
+
+<?php $site_title = get_bloginfo('url'); ?> // Saves Site Title
+
+*/
