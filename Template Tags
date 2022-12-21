@@ -145,4 +145,8 @@ wp_nav_menu($args); // Calling the set arguments in the $args array
 
 walk_nav_menu_tree($items, $depth, $r);
 
-register_nav_menus($location, $description);
+// A function in WordPress that is used to register a new navigation menu location for use in a theme.
+// It is typically used in the theme's functions.php file
+register_nav_menus([
+    'main-menu' => esc_html__('Main Menu', 'wptags'),
+]); 
