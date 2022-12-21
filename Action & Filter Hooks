@@ -1,0 +1,42 @@
+<?php
+
+// ACTION HOOKS
+    // When a certain WordPress lifecycle event occurs
+    // Allows us to run our own code
+
+// FILTER HOOKS
+    // Get WordPress data
+    // Modify the data
+    // Return the modified data
+
+
+// DO ACTION, ADD ACTION, REMOVE ACTION
+
+// Wherever this occurs, we have an action hook
+// Is a function that triggers an action hook. When an action hook is triggered.
+// any functions that are attached to that hook are executed.
+// Takes the name of the action you want to trigger which is set in add_action()
+do_action();
+
+// Allows you to ATTATCH a custom function called an action 
+// Takes 2 arguments, the name of the action hook you want to attatch the action to
+// The name of the custom function you want to attatch to the hook
+add_action();
+
+
+// Allows you to remove an action(custom function) from a hook
+// Takes 2 arguments, the name of the action hook you want to remove from the action
+// The name of the custom function you want to remove from the hook
+remove_action();
+
+// EXAMPLE
+
+function say_hello(){ // Defining say_hello() as a function which echoes "Hello World!"
+    echo "Hello World!";
+}
+
+add_action('greet-user', 'say_hello'); // Attatches say_hello action to the greet-user action hook
+
+do_action('greet-user'); // Triggers greet-user action hook
+
+remove_action('greet-user', 'say_hello'); // Removes say_hello from greet-user so running do_action('greet-user'); agin will do nothing
