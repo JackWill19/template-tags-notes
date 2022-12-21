@@ -151,8 +151,8 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 //     'main-menu' => esc_html__('Main Menu', 'wptags'),
 // ]); 
 
-// POST TAGS - COMMON TAGS
 
+// POST TAGS - COMMON TAGS
 
 the_ID(); // Displays the ID of the current post in the loop
 
