@@ -76,77 +76,92 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 
 // ARCHIVE TAGS
 
-single_post_title(); // Displays the title of a single post, should be used in a loop
+// single_post_title(); // Displays the title of a single post, should be used in a loop
 
-post_type_archive_title(); // Displays the title of a post type archive page
-                           // A post type archive page is a page that lists all of the posts of a particular post type, 
-                           // such as a page that lists all of the posts in a specific category.
+// post_type_archive_title(); // Displays the title of a post type archive page
+//                            // A post type archive page is a page that lists all of the posts of a particular post type, 
+//                            // such as a page that lists all of the posts in a specific category.
 
-single_cat_title(); // Displays the title of a single category archive page
-                    // A category archive page is a page that lists all of the posts in a specific category.
+// single_cat_title(); // Displays the title of a single category archive page
+//                     // A category archive page is a page that lists all of the posts in a specific category.
 
-single_tag_title(); // Displays the title of a single tag archive page
-                    // A tag archive page is a page that lists all of the posts with a specific tag.
+// single_tag_title(); // Displays the title of a single tag archive page
+//                     // A tag archive page is a page that lists all of the posts with a specific tag.
 
-single_term_title(); // Displays the title of a single term archive page
-                     // A term archive page is a page that lists all of the posts with a specific term from a taxonomy 
-                     // (a way of grouping posts by a common attribute).
+// single_term_title(); // Displays the title of a single term archive page
+//                      // A term archive page is a page that lists all of the posts with a specific term from a taxonomy 
+//                      // (a way of grouping posts by a common attribute).
 
-get_archives_link(); // Returns a link to an archive page for a given month or year 
-                     // can be used to create a list of links to monthly or yearly archives of posts on a WordPress website.
+// get_archives_link(); // Returns a link to an archive page for a given month or year 
+//                      // can be used to create a list of links to monthly or yearly archives of posts on a WordPress website.
 
-wp_enqueue_script($handle, $src, $deps, $ver, $in_footer); // A function used to include JS files into a Wordpress theme or plugin
+// wp_enqueue_script($handle, $src, $deps, $ver, $in_footer); // A function used to include JS files into a Wordpress theme or plugin
 
-add_action(); // a function used to add custom functionality to a wordpress site, a way of "HOOKING" a function to a specific
-              // point in the wordpress code so it can be executed at a specific time.
+// add_action(); // a function used to add custom functionality to a wordpress site, a way of "HOOKING" a function to a specific
+//               // point in the wordpress code so it can be executed at a specific time.
 
-calendar_week_mod(); // Function that calculates the week of the year for a given date, returns between 1 and 53.
+// calendar_week_mod(); // Function that calculates the week of the year for a given date, returns between 1 and 53.
 
-get_calendar(); // Generates a calender for the current month and displays it on a site
+// get_calendar(); // Generates a calender for the current month and displays it on a site
 
-delete_get_calendar_cache(); // is a function that clears the cache for the get_calendar() function. 
-                             // This can be useful if the calendar needs to be regenerated for some reason.
+// delete_get_calendar_cache(); // is a function that clears the cache for the get_calendar() function. 
+//                              // This can be useful if the calendar needs to be regenerated for some reason.
 
-allowed_tags(); // Returns an array of allowed HTML tags and attributes which are safe to use in WP
+// allowed_tags(); // Returns an array of allowed HTML tags and attributes which are safe to use in WP
 
 
-// Navigation Tags
+// // Navigation Tags
 
-// Arguments being set to be passed in wp_nav_menu().
-$args = [
-// This argument specifies the theme location of the menu.
-    'theme_location' => 'main-menu', 
-// This argument specifies the name of the menu that should be displayed.
-    'menu' => 'Main Menu', 
-// This argument specifies the HTML element that should be used to wrap the menu.
-    'container' => 'nav', 
-// This argument specifies the class of the HTML element that wraps the menu.
-    'container_class' => 'container-class', 
-// This argument specifies the HTML structure that should be used to wrap the menu items.
-    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
-// This argument specifies the class of the wrapper element for the menu items.
-    'menu_class' => 'items-wrap-class', 
-// This argument specifies the ID of the wrapper element for the menu items.
-    'menu_id' => 'items-wrap-id', 
-// This argument specifies text that should be added before the menu item link text.
-    'link_before' => '', 
-// This argument specifies text that should be added after the menu item link text.
-    'link_after' => '', 
-    'before' => '',
-    'after' => '',
-// This argument specifies the depth of child menu items that should be displayed. 
-// A value of 0 means that all child menu items will be displayed.
-    'depth' => 0,
-// This argument specifies a fallback callback function that should be used if the specified menu is not available.
-    'fallback_cb' => 'wp_page_menu',
-];
+// // Arguments being set to be passed in wp_nav_menu().
+// $args = [
+// // This argument specifies the theme location of the menu.
+//     'theme_location' => 'main-menu', 
+// // This argument specifies the name of the menu that should be displayed.
+//     'menu' => 'Main Menu', 
+// // This argument specifies the HTML element that should be used to wrap the menu.
+//     'container' => 'nav', 
+// // This argument specifies the class of the HTML element that wraps the menu.
+//     'container_class' => 'container-class', 
+// // This argument specifies the HTML structure that should be used to wrap the menu items.
+//     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
+// // This argument specifies the class of the wrapper element for the menu items.
+//     'menu_class' => 'items-wrap-class', 
+// // This argument specifies the ID of the wrapper element for the menu items.
+//     'menu_id' => 'items-wrap-id', 
+// // This argument specifies text that should be added before the menu item link text.
+//     'link_before' => '', 
+// // This argument specifies text that should be added after the menu item link text.
+//     'link_after' => '', 
+//     'before' => '',
+//     'after' => '',
+// // This argument specifies the depth of child menu items that should be displayed. 
+// // A value of 0 means that all child menu items will be displayed.
+//     'depth' => 0,
+// // This argument specifies a fallback callback function that should be used if the specified menu is not available.
+//     'fallback_cb' => 'wp_page_menu',
+// ];
 
-wp_nav_menu($args); // Calling the set arguments in the $args array
+// wp_nav_menu($args); // Calling the set arguments in the $args array
 
-walk_nav_menu_tree($items, $depth, $r);
+// walk_nav_menu_tree($items, $depth, $r);
 
-// A function in WordPress that is used to register a new navigation menu location for use in a theme.
-// It is typically used in the theme's functions.php file
-register_nav_menus([
-    'main-menu' => esc_html__('Main Menu', 'wptags'),
-]); 
+// // A function in WordPress that is used to register a new navigation menu location for use in a theme.
+// // It is typically used in the theme's functions.php file
+// register_nav_menus([
+//     'main-menu' => esc_html__('Main Menu', 'wptags'),
+// ]); 
+
+// POST TAGS - COMMON TAGS
+
+
+the_ID(); // Displays the ID of the current post in the loop
+
+the_title(); // Displays the title of the current post in the loop
+
+the_content(); // Displays the content of current post in the loop
+
+the_excerpt(); // Displays the excerpt of the current post in the loop. Excerpt is a summary of the posts content
+
+the_category(); // Displays the categories that the current post is assigned to
+
+the_tags(); // displays the tags that are assigned to the current post
