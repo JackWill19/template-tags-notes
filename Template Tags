@@ -211,6 +211,13 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 
 // get_post_thumbnail_id(); // Returns the thumbnail ID as a string
 
+
 if(has_post_thumbnail()) { // Simply checks if the post has a thumbnail, if so then display it
-    the_post_thumbnail();
+    
+    $atrr = [ // setting sttribute values to be applied to the thumbnail
+        'class' => 'img featured',
+        'title' => get_the_title(), // Getting the title from the post thumbnail
+    ];
+
+    the_post_thumbnail('full', $attr);
 }
