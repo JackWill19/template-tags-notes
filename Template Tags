@@ -176,3 +176,21 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 // the_modified_date(); // Displays the date on which the current post was last modified
 
 // the_modified_time(); // Displays the time in which the current post was lasr modified
+
+
+// POST TAGS - LESS COMMON TAGS
+
+the_permalink($post); // Displays the permalink URL for the current post in the loop
+
+get_the_permalink($post, $leavename); // Grabs the permalink and returns it as a string.  
+                                      // $post parameter allows you to specify a post object that you want the permalink for.
+
+the_title_attribute($args); // Displays the title attribute for the current post in the loop.
+
+the_shortlink($text, $title, $before, $after); // Displays a short URL for the current post in the loop.
+
+wp_get_shortlink($id, $context, $allow_slugs); // Returns the short URL as a string instead of displaying it
+
+the_meta(); // displays the custom fields for the current post in the loop
+
+get_post_meta($post_id, $key, $single); // Retrieves the value of a specific custom field for a given post
