@@ -91,3 +91,20 @@ single_tag_title(); // Displays the title of a single tag archive page
 single_term_title(); // Displays the title of a single term archive page
                      // A term archive page is a page that lists all of the posts with a specific term from a taxonomy 
                      // (a way of grouping posts by a common attribute).
+
+get_archives_link(); // Returns a link to an archive page for a given month or year 
+                     // can be used to create a list of links to monthly or yearly archives of posts on a WordPress website.
+
+wp_enqueue_script($handle, $src, $deps, $ver, $in_footer); // A function used to include JS files into a Wordpress theme or plugin
+
+add_action(); // a function used to add custom functionality to a wordpress site, a way of "HOOKING" a function to a specific
+              // point in the wordpress code so it can be executed at a specific time.
+
+calendar_week_mod(); // Function that calculates the week of the year for a given date, returns between 1 and 53.
+
+get_calendar(); // Generates a calender for the current month and displays it on a site
+
+delete_get_calendar_cache(); // is a function that clears the cache for the get_calendar() function. 
+                             // This can be useful if the calendar needs to be regenerated for some reason.
+
+allowed_tags(); // Returns an array of allowed HTML tags and attributes which are safe to use in WP
