@@ -199,14 +199,18 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 
 // Enabled in functions.php by using the following code
 
-add_theme_support('post-thumbnails');
-// or
-add_theme_support('post-thumbnails', ['post', 'page']);
+// add_theme_support('post-thumbnails');
+// // or
+// add_theme_support('post-thumbnails', ['post', 'page']);
 
-has_post_thumbnail(); // Checks if post has thumbnail
+// has_post_thumbnail(); // Checks if post has thumbnail
 
-the_post_thumbnail(); // Displays the post thumbnail
+// the_post_thumbnail(); // Displays the post thumbnail
 
-get_the_post_thumbnail(); // Returns the post thumbnail without displaying it
+// get_the_post_thumbnail(); // Returns the post thumbnail without displaying it
 
-get_post_thumbnail_id(); // Returns the thumbnail ID as a string
+// get_post_thumbnail_id(); // Returns the thumbnail ID as a string
+
+if(has_post_thumbnail()) { // Simply checks if the post has a thumbnail, if so then display it
+    the_post_thumbnail();
+}
