@@ -154,14 +154,25 @@ the_title($before, $after, $echo); // the_title accepts multiple parameters, bef
 
 // POST TAGS - COMMON TAGS
 
-the_ID(); // Displays the ID of the current post in the loop
+// the_ID(); // Displays the ID of the current post in the loop
 
-the_title(); // Displays the title of the current post in the loop
+// the_title(); // Displays the title of the current post in the loop
 
-the_content(); // Displays the content of current post in the loop
+// the_content(); // Displays the content of current post in the loop
 
-the_excerpt(); // Displays the excerpt of the current post in the loop. Excerpt is a summary of the posts content
+// the_excerpt(); // Displays the excerpt of the current post in the loop. Excerpt is a summary of the posts content
 
-the_category(); // Displays the categories that the current post is assigned to
+// the_category(); // Displays the categories that the current post is assigned to
 
-the_tags(); // displays the tags that are assigned to the current post
+// the_tags(); // displays the tags that are assigned to the current post
+
+
+// POST TAGS - DATE TAGS
+
+// the_date(); // Displays the date on which the current post was published
+
+// the_time(); // Displays the time when the post was published
+
+// the_modified_date(); // Displays the date on which the current post was last modified
+
+// the_modified_time(); // Displays the time in which the current post was lasr modified
