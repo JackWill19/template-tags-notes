@@ -108,3 +108,41 @@ delete_get_calendar_cache(); // is a function that clears the cache for the get_
                              // This can be useful if the calendar needs to be regenerated for some reason.
 
 allowed_tags(); // Returns an array of allowed HTML tags and attributes which are safe to use in WP
+
+
+// Navigation Tags
+
+// Arguments being set to be passed in wp_nav_menu().
+$args = [
+// This argument specifies the theme location of the menu.
+    'theme_location' => 'main-menu', 
+// This argument specifies the name of the menu that should be displayed.
+    'menu' => 'Main Menu', 
+// This argument specifies the HTML element that should be used to wrap the menu.
+    'container' => 'nav', 
+// This argument specifies the class of the HTML element that wraps the menu.
+    'container_class' => 'container-class', 
+// This argument specifies the HTML structure that should be used to wrap the menu items.
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
+// This argument specifies the class of the wrapper element for the menu items.
+    'menu_class' => 'items-wrap-class', 
+// This argument specifies the ID of the wrapper element for the menu items.
+    'menu_id' => 'items-wrap-id', 
+// This argument specifies text that should be added before the menu item link text.
+    'link_before' => '', 
+// This argument specifies text that should be added after the menu item link text.
+    'link_after' => '', 
+    'before' => '',
+    'after' => '',
+// This argument specifies the depth of child menu items that should be displayed. 
+// A value of 0 means that all child menu items will be displayed.
+    'depth' => 0,
+// This argument specifies a fallback callback function that should be used if the specified menu is not available.
+    'fallback_cb' => 'wp_page_menu',
+];
+
+wp_nav_menu($args); // Calling the set arguments in the $args array
+
+walk_nav_menu_tree($items, $depth, $r);
+
+register_nav_menus($location, $description);
