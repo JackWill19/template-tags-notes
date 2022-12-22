@@ -58,3 +58,34 @@ add_action('second_custom_action', 'second_custom_action', 1, 2); // Attatching 
 // 'second_custom_action' would trigger first as its priority (1) is lower than 'custom_action' (10)
 do_action('custom_action', 'Jack', 'Will');
 do_action('second_custom_action', 'Brett', 'Mason');
+
+
+// HOOKED ACTION FUNCTIONS w/ $wp_actions and $wp_filter
+// $wp_actions is an array of actions which trigger upon page load but doesn't tell us the other functions hooked into it
+// $wp_filter uses its own filter hook system to manage all different functions that are hooked into the actions
+
+var_dump($wp_actions); // Will spit out all the functions which are triggered on page load
+var_dump($wp_filter); // Will list all the filters and action hooks which has things hooked into them 
+
+$wp_filter['action_name']; // Will spew out all the functions hooked to this action
+
+
+// FILTER HOOKS
+
+// Allows us to get data from Wordpress, modify it and then return it back customized
+
+// First you need to create a custom function for these filters
+
+function custom_filter($content){ // a custom filter which takes $content as a parameter
+    return $content . ' ' . '(Modified with custom_filter)'; // Return modified content
+}
+
+add_filter('content_modifier', 'custom_filter', 10); // Attatching custom_filter function to custom_modifier filter hook
+
+$content = 'Heres some dummy text'; // Setting initial content
+
+$filtered_content = apply_filters('content_modifier', $content); // applying the filter hook to the content and storing it to a variable
+
+echo $filtered_content; // Outputs "Here's some dummy text (Modified with custom_filter)"
+
+
