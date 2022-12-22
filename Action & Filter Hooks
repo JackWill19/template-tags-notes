@@ -89,3 +89,18 @@ $filtered_content = apply_filters('content_modifier', $content); // applying the
 echo $filtered_content; // Outputs "Here's some dummy text (Modified with custom_filter)"
 
 
+// COMMONLY USED FILTER HOOKS
+
+the_content($more_link_text, $strip_teaser); // Applied to the post content allowing you to modify or add to the content thats displayed on the page
+
+the_title($before, $after, $echo); // Allows you to modify or add the title that is displayed on the page
+
+wp_title($sep, $display, $seplocation); // Applied to the page title allowing you to modify or add to the title that is displayed in the browser window or tab
+
+excerpt_more(); // Applies to the read more link that appears at the end of an excerpt, filter allows you to modify the text or html of the link
+
+wp_nav_menu_items(); // Applies to the list of menu items for a custom menu, you can add or remove items from the menu or modify the html of the menu items
+
+body_class($class); // Applies to the body element of the page, allows you to apply different styles to different pages or categories of pages in your site
+
+manage_post_columns(); // Filters the columns displayed in the Posts list table
