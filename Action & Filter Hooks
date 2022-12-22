@@ -40,3 +40,21 @@ add_action('greet-user', 'say_hello'); // Attatches say_hello action to the gree
 do_action('greet-user'); // Triggers greet-user action hook
 
 remove_action('greet-user', 'say_hello'); // Removes say_hello from greet-user so running do_action('greet-user'); agin will do nothing
+
+// PRIORITIES AND ARGUMENTS
+
+function custom_action($x, $y) { // Setting up a function to be called with an action hook
+    return $x . ' ' . $y; // Returns both arguments seperated by a space
+}
+
+function second_custom_action($a, $b) {
+    return $a . ' ' . $b;
+}
+
+add_action('custom_action', 'custom_action', 10, 2); // Attatching custom function to an action hook, priority of 10 and takes 2 args
+add_action('second_custom_action', 'second_custom_action', 1, 2); // Attatching custom function to an action hook, priority of 1 and also takes 2 args
+
+// The lowest number set as a prioty always gets executed first
+// 'second_custom_action' would trigger first as its priority (1) is lower than 'custom_action' (10)
+do_action('custom_action', 'Jack', 'Will');
+do_action('second_custom_action', 'Brett', 'Mason');
